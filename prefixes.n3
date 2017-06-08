@@ -1,0 +1,42 @@
+# /var/lib/tomcat7/webapps/raw|mapped/WEB-INF/prefixes.n3
+
+# Prefixes for properties and data types. The first part is from
+# the example "config.ttl". Other prefixes must be appended if necessary.
+# Namespaces which are not present here will occur as "?" for predicates
+# or "()" (empty brackets) for data types on Pubby pages.
+#
+# Execute the following query to see all data types in the store:
+#
+#   select distinct (datatype(?o) as ?type)
+#   where {
+#     ?s ?p ?o .
+#   }
+#   order by ?type
+#
+
+@prefix conf:     <http://richard.cyganiak.de/2007/pubby/config.rdf#> .
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix dbpedia:  <http://localhost:8080/resource/> .
+@prefix dbpprop:  <http://dbpedia.org/property/> .
+@prefix doap:     <http://usefulinc.com/ns/doap#> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix geo:      <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames: <http://www.geonames.org/ontology#> .
+@prefix ir:       <http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#> .
+@prefix meta:     <http://example.org/metadata#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix p:        <http://localhost:8080/property/> .
+@prefix prv:      <http://purl.org/net/provenance/ns#> .
+@prefix prvTypes: <http://purl.org/net/provenance/types#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix units:    <http://dbpedia.org/units/> .
+@prefix void:     <http://rdfs.org/ns/void#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix yago:     <http://localhost:8080/class/yago/> .
+@prefix dbpedia-owl:  <http://dbpedia.org/ontology/> .
+@prefix dbpedia-type: <http://dbpedia.org/datatype/> .
+@prefix pav:      <http://purl.org/pav/> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .

@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix conf: <http://richard.cyganiak.de/2007/pubby/config.rdf#>.
+@prefix askomics: <http://www.semanticweb.org/irisa/ontologies/2016/1/igepp-ontology#> .
+@prefix askomicsVis: <http://www.irisa.fr/dyliss/rdfVisualization/displayattribute> .
+
+<> a conf:Configuration;
+    conf:projectName "AskOmics";
+    conf:projectHomepage __HOME_PAGE__;
+    conf:webBase __URL_PUBBY__;
+    conf:usePrefixesFrom <prefixes.n3>;
+    conf:defaultLanguage "en";
+    conf:dataset [
+        conf:sparqlEndpoint __URL_ENDPOINT__;
+        conf:datasetBase __BASE_PREFIX__;
+        conf:fixUnescapedCharacters "(),'!$&*+;=@";
+        conf:resourceDescriptionQuery "CONSTRUCT { ?__this__ ?p ?o } WHERE { ?__this__ ?p ?o }";
+        conf:resourceDescriptionQuery "CONSTRUCT { ?s ?p ?__this__ } WHERE { ?s ?p ?__this__ }";
+    ];
+    .
